@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Bangladesh - Top Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image:url('ocean3.jpg');
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1b3c73;
+    }
+
+    .navbar .navbar-brand {
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+      color: #ff6f61;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?nature,travel') no-repeat center center/cover;
+      height: 50vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Destinations Section */
+    .destination-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .destination-card h3 {
+      text-transform: capitalize;
+      color: #1b3c73;
+    }
+
+    .destination-card p {
+      color: #555;
+    }
+
+    .destination-card a {
+      background-color: #1b3c73;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .destination-card a:hover {
+      background-color: #ff6f61;
+    }
+
+    /* Animation */
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #1b3c73;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Explore BD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="desti.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trans.html">Transport</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="singup.html">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Explore Bangladesh's Top Destinations</h1>
+  </div>
+
+  <!-- Destinations Section -->
+  <div class="container my-5 text-white">
+    <div class="row">
+
+      <!-- Sajek -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="destination-card">
+          <img src="sajek1.jpg" alt="Sajek">
+          <div class="p-3" >
+            <h3>Sajek Valley</h3>
+            <p.text-white>Located in the hill district of Rangamati, Sajek is a scenic valley with stunning views, clouds, and lush green hills.</p>
+            <a href="sajek.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+       <!-- Sajek -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="destination-card">
+          <img src="sundarbans.jpg" alt="Sundarbans">
+          <div class="p-3" >
+            <h3>Sundarbans</h3>
+            <p.text-white>The world’s largest mangrove forest, home to the Royal Bengal Tiger and abundant wildlife, ideal for nature lovers</p>
+            <a href="sundarbans.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Cox's Bazar -->
+     <div class="col-md-4 mb-4 fade-in">
+        <div class="destination-card">
+   <img src="bazar.jpg" alt="Sundarbans">
+          <div class="p-3" >
+            <h3>Coxs Bazar</h3>
+            <p.text-white>Famous for its long golden beach, Cox's Bazar is a perfect coastal getaway with several water activities.</p> 
+              <a href="coxsbazar.html">Learn More</a> 
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Sylhet -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="destination-card">
+          <img src="PADA.jpg" alt="Sylhet">
+          <div class="p-3">
+            <h3>Sylhet</h3>
+            <p.text-white>Known for its tea gardens, waterfalls, and beautiful hilltops, Sylhet is a serene destination for nature lovers.</p>
+            <a href="sylhet.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comilla -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="destination-card">
+          <img src="coconut.jpg" alt="Comilla">
+          <div class="p-3">
+            <h3>Comilla</h3>
+            <p.text-white>Comilla offers historical sites, including the ancient archaeological site of Mainamati, and lush countryside landscapes.</p>
+            <a href="comilla.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Explore Bangladesh. All Rights Reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="about.html">About Us</a></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
