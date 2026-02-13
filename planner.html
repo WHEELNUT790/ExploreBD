@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Planner | Explore BD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="ui.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark app-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Explore BD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="planner.html">Trip Planner</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking.html">Hotel Booking</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="section-title">Destination & Vacation Planner</h1>
+    <p class="text-secondary mb-4">Plan your trip, calculate total expenses, and get AI-style recommendations instantly.</p>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <section class="panel-card">
+          <h4>Create Your Plan</h4>
+          <div class="row g-3 mt-1">
+            <div class="col-12">
+              <label class="form-label">Destination</label>
+              <select id="destination" class="form-select">
+                <option value="Cox's Bazar">Cox's Bazar</option>
+                <option value="Sajek Valley">Sajek Valley</option>
+                <option value="Sundarbans">Sundarbans</option>
+                <option value="Sylhet">Sylhet</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Days</label>
+              <input id="days" type="number" class="form-control" min="1" value="3" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Travelers</label>
+              <input id="travelers" type="number" class="form-control" min="1" value="2" />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Travel Style</label>
+              <select id="style" class="form-select">
+                <option value="relax">Relax</option>
+                <option value="adventure">Adventure</option>
+                <option value="nature">Nature</option>
+                <option value="family">Family</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-brand" id="generatePlanBtn">Generate Plan</button>
+            </div>
+          </div>
+          <div id="planOutput" class="result-box mt-3"></div>
+        </section>
+      </div>
+
+      <div class="col-lg-6" id="budget">
+        <section class="panel-card">
+          <h4>Total Expense Calculator</h4>
+          <div class="row g-3 mt-1">
+            <div class="col-md-6"><label class="form-label">Transport (৳)</label><input id="transport" type="number" class="form-control" value="6000" /></div>
+            <div class="col-md-6"><label class="form-label">Hotel / Night (৳)</label><input id="hotel" type="number" class="form-control" value="3500" /></div>
+            <div class="col-md-6"><label class="form-label">Meals / Day / Person (৳)</label><input id="meals" type="number" class="form-control" value="900" /></div>
+            <div class="col-md-6"><label class="form-label">Activities (৳)</label><input id="activities" type="number" class="form-control" value="4000" /></div>
+            <div class="col-12"><button class="btn btn-dark" id="calculateBtn">Calculate Total</button></div>
+          </div>
+          <div id="budgetOutput" class="result-box mt-3"></div>
+        </section>
+      </div>
+    </div>
+
+    <section class="panel-card mt-4" id="assistant">
+      <h4>AI Travel Assistant (Lightweight)</h4>
+      <p class="text-secondary">Type what you want in your trip and get a smart recommendation.</p>
+      <div class="row g-3">
+        <div class="col-md-9"><input id="aiPrompt" class="form-control" placeholder="Example: I want a romantic beach vacation for 2 days" /></div>
+        <div class="col-md-3 d-grid"><button class="btn btn-brand" id="aiBtn">Get Suggestion</button></div>
+      </div>
+      <div id="aiOutput" class="result-box mt-3"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
